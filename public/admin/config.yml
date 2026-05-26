@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: main # Ojo: si tu repositorio principal en GitHub dice "master", cámbialo aquí a master.
 
-media_folder: "public/images" # Aquí se guardarán las fotos que suba la doctora
-public_folder: "/images"
+media_folder: "src/assets/images" # Cambiado a la ruta correcta de tu plantilla
+public_folder: "../../assets/images" # Cambiado para que Astro lo lea bien
 
 collections:
   - name: "blog"
