@@ -1,8 +1,11 @@
 ---
-title: "Field Day – Fun for Everyone! 🏅"
-excerpt: "Save the date! Field Day is May 16th. Students will enjoy relay races, tug-of-war, face painting, and more. Parent volunteers are welcome!"
+title: Field Day – Fun for Everyone! 🏅
+excerpt: Save the date! Field Day is May 16th. Students will enjoy relay races,
+  tug-of-war, face painting, and more. Parent volunteers are welcome!
 pubDate: 2026-03-15
 category: Event
+date: 2026-05-26T17:15:00.000-06:00
+image: /images/images.jpeg
 ---
 
 Save the date! Field Day is May 16th. Students will enjoy relay races, tug-of-war, face painting, and more. Parent volunteers are welcome!
