@@ -1,10 +1,10 @@
-export type BlogCategory = "Announcement" | "Event" | "Holiday" | "PTA";
+export type BlogCategory = "Síntomas" | "Diagnósticos" | "Testimonios" | "Vida Académica";
 
 const categoryColorMap: Record<BlogCategory, string> = {
-	Announcement: "bg-brand-blue",
-	Event: "bg-brand-green",
-	Holiday: "bg-brand-yellow",
-	PTA: "bg-brand-red",
+	"Síntomas": "bg-brand-red",      // Rojo para llamar la atención en síntomas
+	"Diagnósticos": "bg-brand-blue", // Azul para transmitir confianza y perfil clínico
+	"Vida Académica": "bg-brand-green", // Verde para crecimiento y actualización
+	"Testimonios": "bg-brand-yellow",   // Amarillo para la calidez de los pacientes
 };
 
 /**
@@ -20,7 +20,8 @@ export function categoryLabel(category: string): string {
 }
 
 export function formatDate(date: Date): string {
-	return date.toLocaleDateString("en-US", {
+	// Cambiado a formato en español
+	return date.toLocaleDateString("es-MX", {
 		year: "numeric",
 		month: "long",
 		day: "numeric",
