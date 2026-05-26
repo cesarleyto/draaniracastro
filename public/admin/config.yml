@@ -11,8 +11,10 @@ collections:
     folder: "src/content/blog" # Ojo 2: Revisa si tu plantilla guarda los artículos aquí o en src/pages/blog
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
+fields:
       - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Fecha", name: "pubDate", widget: "datetime"}
+      - {label: "Categoría", name: "category", widget: "select", options: ["Síntomas", "Diagnósticos", "Testimonios", "Vida Académica"]}
+      - {label: "Resumen corto", name: "excerpt", widget: "text"}
       - {label: "Imagen de Portada", name: "image", widget: "image", required: false}
       - {label: "Cuerpo del artículo", name: "body", widget: "markdown"}
