@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main # Ojo: si tu repositorio principal en GitHub dice "master", cámbialo aquí a master.
+
+media_folder: "public/images" # Aquí se guardarán las fotos que suba la doctora
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Artículos"
+    folder: "src/content/blog" # Ojo 2: Revisa si tu plantilla guarda los artículos aquí o en src/pages/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Imagen de Portada", name: "image", widget: "image", required: false}
+      - {label: "Cuerpo del artículo", name: "body", widget: "markdown"}
