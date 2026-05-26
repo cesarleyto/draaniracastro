@@ -1,5 +1,5 @@
 ---
-title: Field Day – Fun for Everyone! 🏅
+title: Field Day – Fun fodddr Everyone! 🏅
 excerpt: Save the date! Field Day is May 16th. Students will enjoy relay races,
   tug-of-war, face painting, and more. Parent volunteers are welcome!
 pubDate: 2026-03-15
