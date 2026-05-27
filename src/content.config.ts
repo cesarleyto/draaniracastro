@@ -8,7 +8,8 @@ const blog = defineCollection({
         title: z.string(),
         excerpt: z.string(),
         pubDate: z.coerce.date(),
-        category: z.enum(['Announcement', 'Event', 'Holiday', 'PTA']).optional().default('Announcement'),
+        // Aquí actualizamos la lista de invitados y el valor por defecto
+        category: z.enum(['Síntomas', 'Diagnósticos', 'Testimonios', 'Vida Académica']).optional().default('Síntomas'),
     }),
 });
 
