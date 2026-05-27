@@ -37,6 +37,17 @@ const categories = [...new Set(posts.map((p) => p.data.category))].sort();
 				<div class="blog-item" data-category={post.data.category}>
 					<article class="flex bg-white rounded-xl relative hover:translate-x-2 transition shadow-sm hover:shadow-md overflow-hidden">
 						<div class={`w-2 shrink-0 ${categoryBgColor(post.data.category)}`} />
+
+						{post.data.image && (
+							<div class="w-32 md:w-48 shrink-0 bg-gray-100 border-r border-brand-foreground/10">
+								<img 
+									src={post.data.image} 
+									alt={post.data.title} 
+									class="w-full h-full object-cover"
+								/>
+							</div>
+						)}
+
 						<div class="flex-1 p-5">
 							<div class="flex items-center gap-3 mb-2">
 								<span class="text-xs font-semibold bg-[#feca4f] rounded-full px-2 py-1">
