@@ -8,8 +8,8 @@ const blog = defineCollection({
         title: z.string(),
         excerpt: z.string(),
         pubDate: z.coerce.date(),
-        // Aquí actualizamos la lista de invitados y el valor por defecto
         category: z.enum(['Síntomas', 'Diagnósticos', 'Testimonios', 'Vida Académica']).optional().default('Síntomas'),
+        image: z.string().optional(), // ¡NUEVO: Dejamos pasar la imagen!
     }),
 });
 
