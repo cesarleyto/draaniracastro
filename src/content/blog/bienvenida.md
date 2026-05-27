@@ -4,7 +4,7 @@ pubDate: 2026-05-26
 category: Vida Académica
 excerpt: Este es el primer artículo de prueba para confirmar que el sitio carga
   correctamente.
-image: ../../assets/images/images.jpeg
+image: ""
 ---
 
 Este es el contenido de prueba del primer artículo.
