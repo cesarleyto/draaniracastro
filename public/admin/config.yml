@@ -1,17 +1,17 @@
 backend:
   name: git-gateway
-  branch: main # Ojo: si tu repositorio principal en GitHub dice "master", cámbialo aquí a master.
+  branch: main
 
-media_folder: "src/assets/images" # Cambiado a la ruta correcta de tu plantilla
-public_folder: "../../assets/images" # Cambiado para que Astro lo lea bien
+media_folder: "src/assets/images"
+public_folder: "../../assets/images"
 
 collections:
   - name: "blog"
     label: "Artículos"
-    folder: "src/content/blog" # Ojo 2: Revisa si tu plantilla guarda los artículos aquí o en src/pages/blog
+    folder: "src/content/blog"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-fields:
+    fields:
       - {label: "Título", name: "title", widget: "string"}
       - {label: "Fecha", name: "pubDate", widget: "datetime"}
       - {label: "Categoría", name: "category", widget: "select", options: ["Síntomas", "Diagnósticos", "Testimonios", "Vida Académica"]}
