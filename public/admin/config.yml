@@ -1,9 +1,7 @@
 backend:
   name: github
-  repo: cesarleyto/draaniracastro # Conecta directo a tu repo
+  repo: cesarleyto/draaniracastro
   branch: main
-  # Al no poner un servidor de autenticación, Static CMS te pedirá 
-  # el token de acceso personal de GitHub al iniciar sesión.
 
 locale: 'es'
 
@@ -20,7 +18,7 @@ collections:
     fields:
       - { label: "Título", name: "title", widget: "string" }
       - { label: "Fecha", name: "pubDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
-      - { label: "Categoría", name: "category", widget: "select", options: ["Síntomas", "Nutrición", "Vida Académica", "Mitos y Realidades"] }
+      - { label: "Categoría", name: "category", widget: "select", options: ["Síntomas", "Diagnósticos", "Vida Académica", "Testimonios"] }
       - { label: "Extracto (Resumen)", name: "excerpt", widget: "text" }
       - { label: "Imagen de Portada", name: "image", widget: "image" }
       - { label: "Cuerpo del Artículo", name: "body", widget: "markdown" }
