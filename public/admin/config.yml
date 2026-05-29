@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: cesarleyto/draaniracastro # Conecta directo a tu repo
+  branch: main
+  # Al no poner un servidor de autenticación, Static CMS te pedirá 
+  # el token de acceso personal de GitHub al iniciar sesión.
+
+locale: 'es'
+
+# Aquí definimos la carpeta de imágenes que creaste
+media_folder: "src/assets/images/post"
+public_folder: "../../assets/images/post"
+
+collections:
+  - name: "blog"
+    label: "Artículos (Blog)"
+    folder: "src/content/blog" # (Ajustaremos esto si tus archivos .md están en otro lado)
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "pubDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Categoría", name: "category", widget: "select", options: ["Síntomas", "Nutrición", "Vida Académica", "Mitos y Realidades"] }
+      - { label: "Extracto (Resumen)", name: "excerpt", widget: "text" }
+      - { label: "Imagen de Portada", name: "image", widget: "image" }
+      - { label: "Cuerpo del Artículo", name: "body", widget: "markdown" }
