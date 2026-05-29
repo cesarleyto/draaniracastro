@@ -7,7 +7,7 @@ locale: 'es'
 
 # Aquí definimos la carpeta de imágenes que creaste
 media_folder: "src/assets/images/post"
-public_folder: "../../assets/images/post"
+public_folder: "/assets/images/post"
 
 collections:
   - name: "blog"
