@@ -5,8 +5,16 @@ import Footer from "@/components/Footer.astro";
 import { siteName, siteLang, themeColor } from "@/data/config";
 import type { LayoutProps as Props } from "@/types";
 
-const baseUrl = Astro.url.href;
-const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
+const { 
+    title, 
+    seoTitle = title, 
+    seoDescription = "Dra. Anira Castro | Gastroenteróloga Pediatra en CDMX. Especialista en salud digestiva infantil, nutrición y motilidad gastrointestinal.", 
+    noindex = false 
+} = Astro.props;
+
+// Usamos el dominio base para las imágenes de redes sociales
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const ogImage = new URL("/profile.jpg", Astro.url.origin);
 ---
 
 <!doctype html>
@@ -16,8 +24,9 @@ const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content={themeColor} />
 		<meta name="description" content={seoDescription} />
+		<link rel="canonical" href={canonicalURL} />
+		
 		{noindex && <meta name="robots" content="noindex,nofollow" />}
-		<link rel="author" href="humans.txt" />
 
 		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -29,37 +38,38 @@ const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
 		<meta property="og:url" content={Astro.url} />
 		<meta property="og:type" content="website" />
 		<meta property="og:title" content={`${seoTitle} | ${siteName}`} />
-		<meta property="og:image" content={`${baseUrl}/images/og-image.jpg`} />
 		<meta property="og:description" content={seoDescription} />
+		<meta property="og:image" content={ogImage} />
 		<meta property="og:site_name" content={siteName} />
 		<meta property="og:locale" content={siteLang} />
 
-		<meta name="twitter:card" content="summary" />
-		<meta name="twitter:url" content={Astro.url} />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content={`${seoTitle} | ${siteName}`} />
 		<meta name="twitter:description" content={seoDescription} />
-		<!-- <meta name="twitter:image" content={`${baseUrl}/images/og-image.jpg`} /> -->
+		<meta name="twitter:image" content={ogImage} />
 
-		<title>{title}</title>
-<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+		<title>{title} - Salud Digestiva para tu Hijo | Gastroenteróloga Pediátrica Especializada en CDMX</title>
+
+		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
-	<body>
+	<body class="bg-white text-brand-foreground antialiased selection:bg-brand-blue selection:text-white">
 		<Header />
 		<main>
 			<slot />
 		</main>
 		<Footer />
-<script is:inline>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
+
+		<script is:inline>
+		  if (window.netlifyIdentity) {
+		    window.netlifyIdentity.on("init", user => {
+		      if (!user) {
+		        window.netlifyIdentity.on("login", () => {
+		          document.location.href = "/admin/";
+		        });
+		      }
+		    });
+		  }
+		</script>
 	</body>
 </html>
 
@@ -70,12 +80,10 @@ const { title, seoTitle, seoDescription, noindex = false } = Astro.props;
 <script>
 	document.addEventListener("DOMContentLoaded", () => {
 		const header = document.getElementById("main-header");
-
 		if (header) {
 			const updateHeaderHeight = () => {
 				document.documentElement.style.setProperty("--header-height", `${header.offsetHeight}px`);
 			};
-
 			updateHeaderHeight();
 			window.addEventListener("resize", updateHeaderHeight);
 		}

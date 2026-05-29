@@ -4,12 +4,12 @@
 @theme {
 	--font-nunito: "Nunito", "sans-serif";
 	--font-fredoka: "Fredoka", "sans-serif";
-	--color-brand-foreground: #20293c;
-	--color-brand-background: #fffbf0;
-    --color-brand-blue: #1d89ed;
-    --color-brand-red: #dd4c34;
-    --color-brand-green: #3db66d;
-    --color-brand-yellow: #e7af38;
+	--color-brand-foreground: #27274B; /* Texto principal: Morado muy oscuro casi negro */
+    --color-brand-background: #FFF7ED; /* Fondo: Blanco ultra limpio y moderno */
+    --color-brand-blue: #12B3A8; /* Botones/Acentos: El Turquesa característico de su logo */
+    --color-brand-red: #825AC8; /* Detalles/Iconos: El Morado saturado de sus subtítulos */
+    --color-brand-green: #2DCA73; /* Alertas positivas: Verde menta vivo */
+    --color-brand-yellow: #FBB03B; /* Resaltados: Amarillo cálido y vibrante */
 }
 
 @utility container {

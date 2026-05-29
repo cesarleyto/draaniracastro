@@ -1,48 +1,48 @@
 // Global variables
-export const siteLang = "en-US";
-export const siteCurrency = "USD";
-export const siteName = "Elementary";
-export const siteSlogan = "";
-export const themeColor = "#fef08a";
-export const unitSystem = "imperial";
+export const siteLang = "es-MX";
+export const siteCurrency = "MXN";
+export const siteName = "Dra. Anira Castro";
+export const siteSlogan = "Gastroenterología Pediátrica";
+export const themeColor = "#ffffff"; // brand-red
+export const unitSystem = "metric";
 
 export const phone = {
-	href: "tel:+123456789",
-	label: "(123) 456-789",
+    href: "tel:+522299840802",
+    label: "229 984 0802",
 };
 
 export const email = {
-	href: "mailto:info@elementary.com",
-	label: "info@elementary.com",
+    href: "mailto:contacto@draaniracastro.com",
+    label: "contacto@draaniracastro.com",
 };
 
 export const address = {
-	street: "1234 Space Street",
-	city: "Galaxy City",
-	zip: "12345",
-	state: "Milky Way",
-	country: "Space",
+    street: "Camino a Sta. Teresa 1055, La Magdalena Contreras",
+    city: "CDMX",
+    zip: "10700",
+    state: "Ciudad de México",
+    country: "México",
 };
 
 export const socialMedia = {
-	facebook: {
-		url: "https://facebook.com",
-		label: "Facebook",
-		icon: "facebook",
-	},
-	x: {
-		url: "https://x.com",
-		label: "X",
-		icon: "x",
-	},
-	instagram: {
-		url: "https://instagram.com",
-		label: "Instagram",
-		icon: "instagram",
-	},
-	youtube: {
-		url: "https://youtube.com",
-		label: "YouTube",
-		icon: "youtube",
-	},
+    facebook: {
+        url: "https://facebook.com/draaniracastro",
+        label: "Facebook",
+        icon: "facebook",
+    },
+    instagram: {
+        url: "https://instagram.com/draaniracastro",
+        label: "Instagram",
+        icon: "instagram",
+    },
+    tiktok: {
+        url: "https://tiktok.com/@draaniracastro",
+        label: "TikTok",
+        icon: "tiktok",
+    },
+    youtube: {
+        url: "https://youtube.com/@draaniracastro",
+        label: "YouTube",
+        icon: "youtube",
+    },
 };

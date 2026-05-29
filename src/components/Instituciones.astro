@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+
+// Importamos los archivos (Mantenemos tus formatos .png)
+import angelesLogo from '@/assets/images/HospitalAngeles.png';
+import unamLogo from '@/assets/images/UNAM.png';
+import uadecLogo from '@/assets/images/UAdeC.png';
+---
+
+<section class="py-14 md:py-20 bg-brand-foreground">
+  <div class="container mx-auto px-6 max-w-5xl">
+    
+    <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+      
+      <Image 
+        src={uadecLogo} 
+        alt="Universidad Autónoma de Coahuila" 
+        class="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+      />
+
+      <Image 
+        src={unamLogo} 
+        alt="Universidad Nacional Autónoma de México" 
+        class="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+      />
+
+      <Image 
+        src={angelesLogo} 
+        alt="Hospital Ángeles" 
+        class="h-16 md:h-20 w-auto object-contain opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
+      />
+
+    </div>
+
+  </div>
+</section>

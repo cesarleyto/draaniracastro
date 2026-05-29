@@ -1,0 +1,66 @@
+---
+// Importamos la herramienta nativa de Astro para procesar imágenes optimizadas
+import { Image } from 'astro:assets';
+
+// Importamos la nueva imagen estática de retrato
+import draAniraCastroImg from '@/assets/images/draaniracastro.jpg';
+---
+
+<section id="formacion" class="relative overflow-hidden py-20 bg-white">
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+    <div class="absolute top-0 right-0 size-[500px] rounded-full bg-brand-blue opacity-5 blur-[120px]"></div>
+    <div class="absolute bottom-0 left-0 size-[600px] rounded-full bg-brand-yellow opacity-10 blur-[130px]"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+      <div class="order-2 md:order-1 space-y-6">
+        <h2 class="font-fredoka text-3xl md:text-4xl text-brand-foreground font-bold leading-tight">
+          Formación y <span class="text-brand-blue">Experiencia</span>
+        </h2>
+
+        <div class="font-nunito text-brand-foreground/90 space-y-4 text-lg leading-relaxed">
+          <p>
+            Soy la <strong>Dra. Anira Lizbeth Castro Zárate</strong>, especialista dedicada con pasión a la salud digestiva de los más pequeños. Mi camino médico comenzó en la <strong>Universidad Autónoma de Coahuila</strong> donde me formé como Pediatra, para posteriormente realizar la subespecialidad en <strong>Gastroenterología Pediátrica</strong> en la UNAM.
+          </p>
+          
+          <p>
+            Consciente de que cada niño es único, realicé una alta especialidad en <strong>Neurogastroenterología y Motilidad Gastrointestinal</strong>. Esta preparación me permite entender no solo qué le duele a tu bebé, sino cómo funciona su sistema digestivo desde la raíz.
+          </p>
+
+          <div class="bg-brand-blue/5 border-l-4 border-brand-blue p-4 my-6 italic text-brand-blue">
+            "Comprendo profundamente la angustia que sientes cuando tu pequeño no está bien. Como especialista, mi mayor satisfacción es devolverles la tranquilidad y ver a tus hijos crecer sanos y felices."
+          </div>
+
+          <ul class="space-y-2 text-sm text-brand-foreground/70">
+            <li>• Céd. Especialista Gastroenterología Pediátrica: 14484942</li>
+            <li>• Céd. Especialista Pediatría: 13122905</li>
+            <li>• Alta Especialidad en Motilidad (Céd. C1: 8918391)</li>
+          </ul>
+        </div>
+
+        <div class="pt-4">
+          <a 
+            href="/#contacto" 
+            class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white rounded-full bg-gradient-to-r from-brand-red to-pink-500 hover:from-pink-500 hover:to-brand-red shadow-[0_4px_15px_rgba(225,29,72,0.4)] hover:shadow-[0_0_25px_rgba(225,29,72,0.7)] hover:-translate-y-0.5 transition-all duration-300 text-lg"
+          >
+            <span class="relative">Agendar Cita</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="order-1 md:order-2 relative aspect-[3/4] w-full max-w-md mx-auto">
+        <div class="absolute inset-0 rounded-3xl overflow-hidden shadow-2xl border-8 border-white bg-gray-100">
+          <Image 
+            src={draAniraCastroImg} 
+            alt="Dra. Anira Castro - Gastroenterología Pediátrica" 
+            class="w-full h-full object-cover" 
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

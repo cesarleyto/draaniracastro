@@ -1,0 +1,58 @@
+---
+// Importamos la herramienta nativa de Astro para procesar imágenes optimizadas
+import { Image } from 'astro:assets';
+
+// Importamos la imagen única para el fondo de portada
+import portadaImg from '@/assets/images/portada.jpg';
+---
+
+<section class="relative overflow-hidden min-h-[90vh] flex items-end bg-white">
+  
+  <Image 
+    src={portadaImg} 
+    alt="Gastroenterología Pediátrica CDMX - Dra. Anira Castro" 
+    class="absolute inset-0 z-0 w-full h-full object-cover object-center opacity-0 animate-fade-in-hero"
+    quality="high"
+    loading="eager"
+  />
+
+  <div class="absolute inset-x-0 bottom-0 z-10 h-1/2 bg-gradient-to-t from-black/80 via-black/30 to-transparent"></div>
+
+  <div class="container mx-auto relative z-20 flex flex-col justify-end items-center text-center pb-16 md:pb-20 px-5 min-h-[90vh]">
+    
+    <div class="space-y-4 flex flex-col items-center max-w-3xl">
+      <h1 
+        class="font-fredoka text-3xl md:text-4xl lg:text-5xl text-white font-extrabold leading-tight"
+        style="text-shadow: -1.5px -1.5px 0 #825AC8, 1.5px -1.5px 0 #825AC8, -1.5px 1.5px 0 #825AC8, 1.5px 1.5px 0 #825AC8, 0px 4px 14px rgba(39, 39, 75, 0.4);"
+      >
+        Salud digestiva para tu pequeño.
+      </h1>
+
+      <p class="font-nunito text-base md:text-lg text-white font-bold leading-relaxed drop-shadow-[0_2px_4px_rgba(27,27,43,0.9)] max-w-2xl">
+        Cuidamos la pancita de los que más amas con la experiencia médica y el trato cálido que tu familia merece en CDMX. 💜
+      </p>
+    </div>
+
+    <div class="pt-8">
+      <a 
+        href="/#contacto" 
+        class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white rounded-full bg-gradient-to-r from-brand-red to-pink-500 hover:from-pink-500 hover:to-brand-red shadow-[0_4px_15px_rgba(225,29,72,0.4)] hover:shadow-[0_0_25px_rgba(225,29,72,0.7)] hover:-translate-y-0.5 transition-all duration-300 text-lg"
+      >
+        <span class="relative">Agendar Cita</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Animación de desvanecimiento suave al cargar el sitio */
+  @keyframes fadeInHero {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .animate-fade-in-hero {
+    animation: fadeInHero 1s ease-out forwards;
+  }
+</style>

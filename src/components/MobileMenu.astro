@@ -2,63 +2,69 @@
 import { siteName } from "@/data/config";
 import IconLogo from "@/assets/logo/logo.svg";
 import { MainMenu } from "@/data/menu";
+import { socialMedia } from "@/data/config";
 
+// Reutilizamos la lógica del pathname
 const rmTrailingSlash = (path: string): string => {
 	return path.endsWith("/") && path.length > 1 ? path.slice(0, path.length - 1) : path;
 };
-
 const pathname = rmTrailingSlash(Astro.url.pathname);
 ---
 
 <el-dialog>
-	<dialog id="mobile-menu" class="backdrop:bg-transparent md:hidden">
+	<dialog id="mobile-menu" class="backdrop:bg-white/95 backdrop-blur-sm md:hidden p-0 w-full h-full border-none">
 		<div tabindex="0" class="fixed inset-0 focus:outline-none">
-			<el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-brand-foreground/10">
-				<!-- Header row — matches sticky bar layout exactly -->
-				<div class="container py-4 flex items-center justify-between gap-x-4">
-					<a href="/" class="flex gap-x-4 items-center">
-						<IconLogo class:list={"size-12"} />
-						<span class="font-bold lowercase font-fredoka text-4xl">{siteName}</span>
+			<el-dialog-panel class="w-full h-full flex flex-col p-6">
+				
+				<div class="flex items-center justify-between mb-12">
+					<!-- LOGO ACTUALIZADO: Icono + Tipografía en el Menú Móvil -->
+					<a href="/" class="flex gap-x-3 items-center">
+						<div class="size-12 flex-shrink-0">
+							<IconLogo class="w-full h-full drop-shadow-sm" />
+						</div>
+						<div class="flex flex-col justify-center">
+							<span class="font-fredoka text-xl text-brand-blue font-semibold tracking-wide leading-none mb-1">
+								Dra. Anira Castro
+							</span>
+							<span class="font-nunito text-[9px] text-brand-red font-bold tracking-[0.15em] uppercase whitespace-nowrap">
+								Gastroenterología Pediátrica
+							</span>
+						</div>
 					</a>
-					<button
-						type="button"
-						command="close"
-						commandfor="mobile-menu"
-						class="text-brand-foreground"
-					>
-						<span class="sr-only">Close menu</span>
-						<svg
-							viewBox="0 0 24 24"
-							fill="none"
-							stroke="currentColor"
-							stroke-width="1.5"
-							aria-hidden="true"
-							class="size-6"
-						>
-							<path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+
+					<button type="button" command="close" commandfor="mobile-menu" class="text-brand-foreground p-2">
+						<svg class="size-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
 						</svg>
 					</button>
 				</div>
 
-				<!-- Nav links -->
-				<nav class="container mt-24">
-					<ul class="flex flex-col gap-1 font-fredoka text-3xl font-semibold tracking-wide items-center">
-						{
-							MainMenu.map((item) => (
-								<li class="w-full">
-									<a
-										href={item.href}
-										target={item.target}
-										rel={item.target === "_blank" ? "noopener noreferrer" : undefined}
-										class={`lowercase block px-3 py-2 text-center ${pathname === item.href ? (item.activeClass ?? "") : ""}`}
-									>
-										{item.label}
-									</a>
-								</li>
-							))
-						}
+				<nav class="flex-grow flex flex-col justify-center">
+					<ul class="flex flex-col gap-8 font-fredoka text-3xl font-bold tracking-tight text-center">
+						{MainMenu.map((item) => (
+							<li>
+								<a
+									href={item.href}
+									class={`block ${pathname === item.href ? "text-brand-blue" : "text-brand-foreground"}`}
+								>
+									{item.label}
+								</a>
+							</li>
+						))}
 					</ul>
 				</nav>
+
+				<div class="mt-auto pt-10 border-t border-slate-100 flex justify-center gap-8">
+					<a href={socialMedia.facebook.url} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#1877F2]">
+						<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+					</a>
+					<a href={socialMedia.instagram.url} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-[#E4405F]">
+						<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.137.052 1.931.232 2.616.505.707.275 1.285.64 1.85 1.205.564.564.93 1.143 1.205 1.85.273.684.453 1.478.505 2.616.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.052 1.137-.232 1.931-.505 2.616-.275.707-.64 1.285-1.205 1.85-.564.564-1.143.93-1.85 1.205-.684.273-1.478.453-2.616.505-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.137-.052-1.931-.232-2.616-.505-.707-.275-1.285-.64-1.85-1.205-.564-.564-.93-1.143-1.205-1.85-.273-.684-.453-1.478-.505-2.616-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.052-1.137.232-1.931.505-2.616.275-.707.64-1.285 1.205-1.85.564-.564 1.143-.93 1.85-1.205.684-.273 1.478-.453 2.616-.058 1.266-.058 1.646-.07 4.85-.07zm0 1.802c-3.134 0-3.504.012-4.747.068-1.026.047-1.58.21-1.954.354-.492.19-.844.42-1.213.788-.368.368-.6.72-.788 1.213-.143.374-.306.928-.354 1.954-.056 1.243-.068 1.613-.068 4.747s.012 3.504.068 4.747c.047 1.026.21 1.58.354 1.954.19.492.42.844.788 1.213.368.368.72.6 1.213.788.374.143.928.306 1.954.354 1.243.056 1.613.068 4.747.068s3.504-.012 4.747-.068c1.026-.047 1.58-.21 1.954-.354.492-.19.844-.42 1.213-.788.368-.368.6-.72.788-1.213.143-.374.306-.928.354-1.954.056-1.243.068-1.613.068-4.747s-.012-3.504-.068-4.747c-.047-1.026-.21-1.58-.354-1.954-.19-.492-.42-.844-.788-1.213-.368-.368-.72-.6-1.213-.788-.374-.143-.928-.306-1.954-.354-1.243-.056-1.613-.068-4.747-.068zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"/></svg>
+					</a>
+					<a href={socialMedia.tiktok.url} target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-black">
+						<svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.04-.1z"/></svg>
+					</a>
+				</div>
 			</el-dialog-panel>
 		</div>
 	</dialog>
@@ -71,9 +77,6 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 	panel?.addEventListener("click", (e) => {
 		const anchor = (e.target as Element).closest("a");
 		if (!anchor) return;
-		const href = anchor.getAttribute("href") ?? "";
-		if (href.startsWith("#") || href.startsWith("/#")) {
-			dialog.hide();
-		}
+		dialog.hide();
 	});
 </script>

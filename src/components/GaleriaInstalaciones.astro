@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+
+// Importamos las fotos
+import foto1 from '@/assets/images/foto1.jpg';
+import foto2 from '@/assets/images/foto2.jpg';
+import foto3 from '@/assets/images/foto3.jpg';
+import foto4 from '@/assets/images/foto4.jpg';
+---
+
+<section class="w-full overflow-hidden bg-white">
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-0">
+    
+    { [foto1, foto2, foto3, foto4].map((img, index) => (
+      <div class="relative aspect-square overflow-hidden group cursor-pointer">
+        <Image 
+          src={img} 
+          alt={`Instalaciones Dra. Anira Castro ${index + 1}`}
+          class="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-110"
+          loading="lazy"
+          data-gallery-item
+        />
+        <div class="absolute inset-0 bg-brand-foreground/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+    )) }
+
+  </div>
+
+  <div id="lightbox" class="fixed inset-0 z-[100] hidden bg-brand-foreground/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 cursor-zoom-out">
+    <button class="absolute top-5 right-5 text-white text-4xl font-light hover:text-brand-blue transition-colors">&times;</button>
+    <img id="lightbox-img" src="" alt="Vista ampliada" class="max-w-full max-h-full rounded-lg shadow-2xl object-contain animate-fade-in" />
+  </div>
+</section>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const galleryItems = document.querySelectorAll('[data-gallery-item]');
+  const closeBtn = lightbox?.querySelector('button');
+
+  galleryItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const img = item as HTMLImageElement;
+      if (lightbox && lightboxImg) {
+        // Obtenemos la URL de la imagen procesada por Astro
+        lightboxImg.src = img.src;
+        lightbox.classList.remove('hidden');
+        document.body.style.overflow = 'hidden'; // Bloquea el scroll del sitio
+      }
+    });
+  });
+
+  // Cerrar al hacer clic en la X, en el fondo o presionar Escape
+  const closeLightbox = () => {
+    lightbox?.classList.add('hidden');
+    document.body.style.overflow = ''; // Libera el scroll
+  };
+
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === closeBtn) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+
+<style>
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+</style>

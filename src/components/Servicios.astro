@@ -1,0 +1,102 @@
+---
+import { Image } from 'astro:assets';
+
+// Importamos los 6 íconos SVG
+import icono1 from '@/assets/images/icono1.svg';
+import icono2 from '@/assets/images/icono2.svg';
+import icono3 from '@/assets/images/icono3.svg';
+import icono4 from '@/assets/images/icono4.svg';
+import icono5 from '@/assets/images/icono5.svg';
+import icono6 from '@/assets/images/icono6.svg';
+---
+
+<section class="relative overflow-hidden py-24 bg-white">
+  
+  <div class="absolute inset-0 z-0" aria-hidden="true">
+    <div class="absolute top-10 left-10 size-[500px] rounded-full bg-brand-blue opacity-10 blur-[120px]"></div>
+    <div class="absolute bottom-10 right-10 size-[600px] rounded-full bg-brand-yellow opacity-15 blur-[130px]"></div>
+  </div>
+
+  <div class="container mx-auto px-6 relative z-10 max-w-6xl">
+    
+    <div class="text-center mb-16">
+      <h2 class="font-fredoka text-3xl md:text-5xl text-brand-foreground font-bold">
+        Áreas de especialidad <span class="text-brand-blue">y de diagnóstico</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-16">
+      
+      <div class="bg-pink-500 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform flex items-center gap-5">
+        <div class="shrink-0 w-16 h-16 bg-white/20 rounded-full flex justify-center items-center p-3">
+          <Image src={icono1} alt="Trastornos Digestivos Comunes" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 class="font-fredoka text-xl text-white font-bold leading-tight mb-1">Trastornos Digestivos</h3>
+          <p class="font-nunito text-white/90 text-sm leading-snug">Manejo de reflujo, cólicos, estreñimiento y episodios de diarrea.</p>
+        </div>
+      </div>
+
+      <div class="bg-orange-400 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform flex items-center gap-5">
+        <div class="shrink-0 w-16 h-16 bg-white/20 rounded-full flex justify-center items-center p-3">
+          <Image src={icono2} alt="Alergias Alimentarias y Nutrición" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 class="font-fredoka text-xl text-white font-bold leading-tight mb-1">Alergias y Nutrición</h3>
+          <p class="font-nunito text-white/90 text-sm leading-snug">Asesoría para APLV, intolerancias y planes de nutrición infantil.</p>
+        </div>
+      </div>
+
+      <div class="bg-emerald-500 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform flex items-center gap-5">
+        <div class="shrink-0 w-16 h-16 bg-white/20 rounded-full flex justify-center items-center p-3">
+          <Image src={icono3} alt="Enfermedades de Hígado y Páncreas" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 class="font-fredoka text-xl text-white font-bold leading-tight mb-1">Hígado y Páncreas</h3>
+          <p class="font-nunito text-white/90 text-sm leading-snug">Monitoreo y cuidado especializado de órganos vitales digestivos.</p>
+        </div>
+      </div>
+
+      <div class="bg-sky-500 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform flex items-center gap-5">
+        <div class="shrink-0 w-16 h-16 bg-white/20 rounded-full flex justify-center items-center p-3">
+          <Image src={icono4} alt="Motilidad Gastrointestinal" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 class="font-fredoka text-xl text-white font-bold leading-tight mb-1">Motilidad Intestinal</h3>
+          <p class="font-nunito text-white/90 text-sm leading-snug">Diagnóstico avanzado para problemas de deglución y evacuación.</p>
+        </div>
+      </div>
+
+      <div class="bg-violet-500 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform flex items-center gap-5">
+        <div class="shrink-0 w-16 h-16 bg-white/20 rounded-full flex justify-center items-center p-3">
+          <Image src={icono5} alt="Estudios de Alta Especialidad" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 class="font-fredoka text-xl text-white font-bold leading-tight mb-1">Alta Especialidad</h3>
+          <p class="font-nunito text-white/90 text-sm leading-snug">Manometría y pH-impedanciometría con equipo de vanguardia.</p>
+        </div>
+      </div>
+
+      <div class="bg-teal-500 rounded-2xl p-6 shadow-lg hover:-translate-y-1 transition-transform flex items-center gap-5">
+        <div class="shrink-0 w-16 h-16 bg-white/20 rounded-full flex justify-center items-center p-3">
+          <Image src={icono6} alt="Consulta Presencial y Videoconsulta" class="w-full h-full object-contain" />
+        </div>
+        <div>
+          <h3 class="font-fredoka text-xl text-white font-bold leading-tight mb-1">Atención Continua</h3>
+          <p class="font-nunito text-white/90 text-sm leading-snug">Consultas presenciales en CDMX y seguimiento por videoconsulta.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="flex justify-center mt-4">
+      <a 
+        href="/#contacto" 
+        class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-bold text-white rounded-full bg-gradient-to-r from-slate-800 to-slate-900 hover:from-slate-900 hover:to-slate-800 shadow-[0_4px_15px_rgba(30,41,59,0.4)] hover:shadow-[0_0_25px_rgba(15,23,42,0.6)] hover:-translate-y-0.5 transition-all duration-300 text-lg"
+      >
+        <span class="relative">¿En qué podemos ayudar a tu pequeño?</span>
+      </a>
+    </div>
+
+  </div>
+</section>
