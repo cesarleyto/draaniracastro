@@ -3,7 +3,7 @@ title: "Empieza a comer sólidos y se estriñe: Tips básicos y cuándo pedir ay
 pubDate: 2026-02-26
 category: Síntomas
 excerpt: La llegada de las papillas es emocionante, pero el intestino del bebé necesita adaptarse. Conoce cómo manejar el estreñimiento en esta etapa.
-image: ../../assets/images/posts/post9.jpg
+image: /images/posts/post9.jpg
 ---
 
 ¡Llegó el gran momento! 🎉 Tu bebé cumplió 6 meses y por fin probará la zanahoria, la manzana y el pollito. Es una etapa llena de fotos hermosas y descubrimientos, pero que frecuentemente trae un invitado sorpresa que asusta a muchas mamás: el temido estreñimiento por alimentación complementaria. 🥕🥦

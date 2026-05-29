@@ -3,7 +3,7 @@ title: "Llora sin consuelo todas las tardes: ¿Cólicos normales o algo más?"
 pubDate: 2026-02-19
 category: Síntomas
 excerpt: Si tu bebé tiene episodios de llanto incontrolable por las tardes que no ceden con masajes, aprende a identificar si hay una causa médica oculta.
-image: ../../assets/images/posts/post8.jpg
+image: /images/posts/post8.jpg
 ---
 
 La famosa "hora bruja". 🕰️ Ese momento al atardecer donde parece que se enciende un interruptor y tu bebé comienza a llorar sin que nada, absolutamente nada, logre calmarlo. El llanto constante es agotador física y mentalmente para ti como mamá. Y cuando todos te dicen *"son cólicos, aguanta, a los 3 meses se le quita"*, a veces sientes que nadie entiende tu desesperación. 🤱💤

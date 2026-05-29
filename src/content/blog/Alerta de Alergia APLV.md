@@ -3,7 +3,7 @@ title: "Ronchas, cólicos y diarrea: Señales de Alergia a la Proteína de la Le
 pubDate: 2026-01-15
 category: Síntomas
 excerpt: Si tu bebé presenta malestares constantes y cambios de fórmula sin éxito, podría tratarse de una alergia a la proteína de la leche de vaca.
-image: ../../assets/images/posts/post3.jpg
+image: /images/posts/post3.jpg
 ---
 
 Es desgastante ver a tu bebé incómodo todo el tiempo y sentir que ya probaste todos los biberones y fórmulas posibles sin éxito. 😩 Muchas mamás llegan al consultorio agotadas tras semanas de llantos y noches en vela, sin saber que el culpable podría estar en la proteína de la leche. 🥛
