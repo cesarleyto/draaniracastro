@@ -3,7 +3,7 @@ title: "¿Viste sangre en el pañal o en el baño de tu hijo? Mantén la calma y
 pubDate: 2026-01-29
 category: Síntomas
 excerpt: Encontrar sangre en la popó de tu hijo es alarmante, pero mantener la calma y buscar un diagnóstico preciso es el primer paso.
-image: /images/posts/post5.jpg
+image: /src/assets/images/posts/post5.jpg
 ---
 
 Pocas cosas asustan tanto a una mamá como el momento de cambiar un pañal o limpiar a su pequeño en el baño y descubrir rastros de sangre. 😰 Sé que en ese instante el corazón late a mil por hora y la mente se va a los peores escenarios. Antes que nada: respira profundo. 🧘‍♀️ En la gran mayoría de los casos pediátricos, este síntoma tiene solución médica rápida y efectiva.

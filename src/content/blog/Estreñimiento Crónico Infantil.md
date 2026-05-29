@@ -3,7 +3,7 @@ title: "Mi hijo pasa días sin ir al baño: ¿Cuándo el estreñimiento deja de 
 pubDate: 2026-01-01
 category: Síntomas
 excerpt: Ver a tu pequeño pujar con dolor al ir al baño rompe el corazón. Descubre cuándo el estreñimiento deja de ser pasajero y necesita revisión médica.
-image: /images/posts/post1.jpg
+image: /src/assets/images/posts/post1.jpg
 ---
 
 ¡Hola, mamá! 👋 Sé perfectamente lo angustiante que es ver a tu pequeño hacer un esfuerzo enorme, sudar o incluso llorar cada vez que intenta ir al baño. Como mamá y como gastropediatra, quiero decirte algo muy importante: ver sufrir a tu hijo en el baño no es normal, y no tienes que conformarte con escuchar que "ya se le pasará". 🥺

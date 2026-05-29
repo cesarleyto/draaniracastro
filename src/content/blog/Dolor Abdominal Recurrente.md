@@ -3,7 +3,7 @@ title: "'Me duele la pancita': Cuándo un dolor de estómago infantil ya requier
 pubDate: 2026-01-22
 category: Síntomas
 excerpt: Descubre las señales de alerta para saber cuándo el dolor de panza de tu hijo deja de ser común y necesita la revisión de un gastropediatra.
-image: /images/posts/post4.jpg
+image: /src/assets/images/posts/post4.jpg
 ---
 
 Casi todos hemos escuchado a nuestros pequeños decir *"me duele la panza"*. A veces es porque comieron demasiados dulces en una piñata 🍬, o incluso porque están nerviosos por un examen en la escuela. Como mamás, nuestro primer instinto suele ser prepararles un té de manzanilla o sobar su abdomen. Pero, ¿qué pasa cuando ese dolor se vuelve una queja de todas las semanas? 🤔

@@ -3,7 +3,7 @@ title: "¿Realmente necesito desparasitar a mi hijo cada 6 meses? Mitos y verdad
 pubDate: 2026-03-05
 category: Síntomas
 excerpt: Descubre por qué la costumbre de desparasitar "por rutina" puede dañar la flora intestinal de tu pequeño y cuándo es realmente necesario.
-image: /images/posts/post10.jpg
+image: /src/assets/images/posts/post10.jpg
 ---
 
 Crecimos escuchando campañas de salud e historias de nuestras mamás y abuelas diciendo que a toda la familia se le desparasita religiosamente cada 6 meses. *"Para matar a los bichos"*, decían. 🦠 Esta costumbre quedó tan arraigada que, hoy en día, muchas mamás me preguntan en el consultorio qué pastilla deben darle a su pequeño por pura rutina. 💊

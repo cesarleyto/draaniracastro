@@ -3,7 +3,7 @@ title: "Diarrea que no se corta: Riesgos de deshidratación y cuándo correr al 
 pubDate: 2026-02-05
 category: Síntomas
 excerpt: Conoce los riesgos ocultos de una diarrea que dura más de dos semanas y cómo proteger el desarrollo y la nutrición de tu pequeño.
-image: /images/posts/post6.jpg
+image: /src/assets/images/posts/post6.jpg
 ---
 
 Todos los niños, tarde o temprano, se enfrentan a un virus estomacal que les causa diarrea por un par de días. 🤒 Nuestro trabajo en casa suele ser mantenerlos hidratados y darles dieta blanda. Pero, ¿qué pasa cuando los días se convierten en semanas y las idas al baño no mejoran? 🚽

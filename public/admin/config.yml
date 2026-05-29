@@ -6,8 +6,8 @@ backend:
 locale: 'es'
 
 # Aquí definimos la carpeta de imágenes que creaste
-media_folder: "public/images/post"
-public_folder: "/images/post"
+media_folder: "src/assets/images/posts"
+public_folder: "/src/assets/images/posts"
 
 collections:
   - name: "blog"

@@ -3,7 +3,7 @@ title: "¿Mi bebé tiene reflujo o son solo 'buches'? Aprende a diferenciarlos"
 pubDate: 2026-01-08
 category: Síntomas
 excerpt: Entiende la diferencia entre un bebé con regurgitación natural y uno que sufre de reflujo gastroesofágico para darle el alivio que necesita.
-image: /images/posts/post2.jpg
+image: /src/assets/images/posts/post2.jpg
 ---
 
 Una de las preocupaciones más grandes que escucho en mi consultorio es: *"Doctora, mi bebé vomita casi toda la leche que toma"*. 🍼 Entiendo perfecto el susto que da ver cómo la lechita se regresa, sobre todo cuando parece que fue muchísima cantidad. Pero hoy quiero darte tranquilidad y enseñarte a distinguir entre lo que es normal y lo que necesita atención médica. 👩‍⚕️

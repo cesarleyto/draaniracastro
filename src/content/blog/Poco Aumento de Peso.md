@@ -3,7 +3,7 @@ title: "Mi hijo come bien pero no sube de peso: ¿Podría ser un problema gástr
 pubDate: 2026-02-12
 category: Síntomas
 excerpt: Si tu hijo tiene buen apetito pero su curva de crecimiento está estancada, su intestino podría no estar absorbiendo los nutrientes. 
-image: /images/posts/post7.jpg
+image: /src/assets/images/posts/post7.jpg
 ---
 
 Pocas cosas generan tanta ansiedad en la maternidad como ir a la revisión mensual con el pediatra y ver que la báscula no se movió, o peor aún, que bajó un poco de peso. ⚖️ Cuando ves que tu hijo se termina su plato pero sigue sin ganar talla ni peso, es normal sentir mucha frustración e impotencia. 🥺
