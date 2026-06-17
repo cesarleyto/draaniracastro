@@ -8,7 +8,7 @@ import type { LayoutProps as Props } from "@/types";
 const { 
     title, 
     seoTitle = title, 
-    seoDescription = "Dra. Anira Castro | Gastroenteróloga Pediatra en CDMX. Especialista en salud digestiva infantil, nutrición y motilidad gastrointestinal.", 
+    seoDescription = "Dra. Anira Castro | Gastroenteróloga Pediatra en CDMX, Hospital Ángeles Pedregal (Sur) y Clínica Londres (Roma Norte / Condesa). Especialista en salud digestiva infantil, nutrición y motilidad gastrointestinal.", 
     noindex = false 
 } = Astro.props;
 
@@ -48,7 +48,7 @@ const ogImage = new URL("/og-image.jpg", Astro.url.origin);
 		<meta name="twitter:description" content={seoDescription} />
 		<meta name="twitter:image" content={ogImage} />
 
-		<title>{title} - Salud Digestiva para tu Hijo | Gastroenteróloga Pediátrica Especializada en CDMX</title>
+		<title>{title} - Salud Digestiva para tu Hijo | Gastroenteróloga Pediátrica en CDMX, Roma Norte / Condesa y Pedregal (Sur CDMX)</title>
 
 		<script is:inline src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 	</head>
