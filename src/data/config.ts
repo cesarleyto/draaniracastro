@@ -1,8 +1,8 @@
 // Global variables
 export const siteLang = "es-MX";
 export const siteCurrency = "MXN";
-export const siteName = "Dra. Anira Castro;
-export const siteSlogan = "Gastroenterología Pediátrica. Cuidamos la pancita de tus pequeños.";
+export const siteName = "Dra. Anira Castro - Gastro Pediatra CDMX";
+export const siteSlogan = "Especialista en gastroenterología pediátrica y nutrición. Diagnóstico de reflujo, cólicos y APLV. Consultas en Hospital Ángeles Pedregal (Sur) y Clínica Londres (Roma Norte / Condesa).";
 export const themeColor = "#ffffff"; // brand-red
 export const unitSystem = "metric";
 
