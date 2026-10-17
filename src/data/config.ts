@@ -2,7 +2,7 @@
 export const siteLang = "es-MX";
 export const siteCurrency = "MXN";
 export const siteName = "Dra. Anira Castro - Gastro Pediatra CDMX";
-export const siteSlogan = "Especialista en gastroenterología pediátrica y nutrición. Diagnóstico de reflujo, cólicos y APLV. Consultas en Hospital Ángeles Pedregal (Sur) y Clínica Londres (Roma Norte / Condesa).";
+export const siteSlogan = "Especialista en gastroenterología pediátrica y nutrición. Diagnóstico de reflujo, cólicos y APLV. Consultas en Hospital Ángeles Pedregal (Sur) y Hospital San Ángel Inn HMG (Coyoacán).";
 export const themeColor = "#ffffff"; // brand-red
 export const unitSystem = "metric";
 
